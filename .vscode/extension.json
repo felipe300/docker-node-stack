@@ -1,0 +1,7 @@
+{
+  "recomendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "gruntfuggly.triggertaskonsave"
+  ]
+}
