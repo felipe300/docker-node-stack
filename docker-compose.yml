@@ -10,5 +10,16 @@ services:
       - .:/usr/src/app
       - /usrsrc/app/node_modules
     command: npm run start:docker
+    depends_on:
+      - postgres_db
     environment:
+      DATABASE_URL: postgres://postgres@postgres_db/webapp_dev
       PORT: 8000
+
+  postgres_db:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: webapp_dev
+      POSTGRES_HOST_AUTH_METHOD: trust
