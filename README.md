@@ -2,6 +2,7 @@
 
 ### Description
 
+- typescript
 - swc
 - prisma
 - knex
